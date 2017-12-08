@@ -18,7 +18,7 @@ $(function() {
         self.control.flag_debug = ko.observable(false); //40
         
         
-        self.control.setFlags = function(){
+        self.control.repetier_setFlags = function(){
             var echo = 0;
             var info = 0;
             var error = 0;
@@ -67,29 +67,29 @@ $(function() {
                 <h1>Debug</h1>\
                 <div  id=\"debug-button-container\">\
                     <form class=\"form-horizontal\">\
-                        <div class=\"control-group\">\
-                            <div class=\"controls\">\
-                                <input type=\"checkbox\" data-bind=\"checked: $root.flag_echo\"> Echo</input>\
+                        <div  class=\"jog-panel\">\
+                            <div>\
+                                <input class=\"pull-left\" type=\"checkbox\" data-bind=\"checked: $root.flag_echo\"> Echo</input>\
                             </div>\
-                            <div class=\"controls\">\
-                                <input type=\"checkbox\" data-bind=\"checked: $root.flag_info\"> Info</input>\
+                            <div>\
+                                <input class=\"pull-left\" type=\"checkbox\" data-bind=\"checked: $root.flag_info\"> Info</input>\
                             </div>\
-                            <div class=\"controls\">\
-                                <input type=\"checkbox\" data-bind=\"checked: $root.flag_error\"> Error</input>\
+                            <div>\
+                                <input class=\"pull-left\" type=\"checkbox\" data-bind=\"checked: $root.flag_error\"> Error</input>\
                             </div>\
-                            <div class=\"controls\">\
-                                <input type=\"checkbox\" data-bind=\"checked: $root.flag_dry\"> Dry Run</input>\
+                            <div>\
+                                <input class=\"pull-left\" type=\"checkbox\" data-bind=\"checked: $root.flag_dry\"> Dry Run</input>\
                             </div>\
-                            <div class=\"controls\">\
-                                <input type=\"checkbox\" data-bind=\"checked: $root.flag_comm\"> Comms</input>\
+                            <div>\
+                                <input class=\"pull-left\" type=\"checkbox\" data-bind=\"checked: $root.flag_comm\"> Comms</input>\
                             </div>\
-                            <div class=\"controls\">\
-                                <input type=\"checkbox\" data-bind=\"checked: $root.flag_moves\"> Moves</input>\
+                            <div>\
+                                <input class=\"pull-left\" type=\"checkbox\" data-bind=\"checked: $root.flag_moves\"> Moves</input>\
                             </div>\
-                            <div class=\"controls\">\
-                                <input type=\"checkbox\" data-bind=\"checked: $root.flag_debug\"> Debug</input>\
+                            <div>\
+                                <input class=\"pull-left\" type=\"checkbox\" data-bind=\"checked: $root.flag_debug\"> Debug</input>\
                             </div>\
-                            <button class=\"btn btn-default\" data-bind=\"click: function() { $root.setFlags() }\">Set Flags</button></p>\
+                            <button class=\"btn btn-default\" data-bind=\"click: function() { $root.repetier_setFlags() }\">Set Flags</button></p>\
                         </div>\
                     </form>\
                 </div>\
