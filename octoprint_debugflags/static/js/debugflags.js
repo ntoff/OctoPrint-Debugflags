@@ -63,8 +63,8 @@ $(function() {
         }
 
         $("#control-jog-general").after("\
-            <div id=\"debug\">\
-                <h1>Debug</h1>\
+            <div id=\"debug\" data-bind=\"visible: loginState.hasPermissionKo(access.permissions.CONTROL)\">\
+                <h1>Flags</h1>\
                 <div  id=\"debug-button-container\">\
                     <form class=\"form-horizontal\">\
                         <div  class=\"jog-panel\">\
